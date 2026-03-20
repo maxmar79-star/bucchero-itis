@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria AR - Bucchero Next</title>
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+
+    <style>
+        :root {
+            --orange: #e67e22;
+            --dark-bg: #121212;
+            --card-bg: #1f1f1f;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+        }
+
+        header {
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--card-bg);
+            border-bottom: 3px solid var(--orange);
+        }
+
+        h1 { margin: 0; color: var(--orange); text-transform: uppercase; }
+
+        /* Griglia Responsiva */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Card del reperto */
+        .artifact-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .artifact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--orange);
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 300px;
+            background-color: #1a1a1a;
+        }
+
+        .info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .info h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            color: #eee;
+        }
+
+        /* Pulsante AR */
+        .ar-button {
+            background-color: var(--orange);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            background: #000;
+        }
+
+        nav a {
+            color: var(--orange);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html" style="border-bottom: 2px solid var(--orange)">GALLERIA AR</a>
+    </nav>
+
+    <header>
+        <h1>Collezione Bucchero Next</h1>
+        <p>Esplora i reperti in 3D e attiva la Realtà Aumentata sul tuo piano</p>
+    </header>
+
+    <div class="gallery-container">
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_calice_dal_tumulo_di_Molinello.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Calice dal tumulo di Molinello</h3>
+            </div>
+        </div>
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_caryatid.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Bucchero caryatid</h3>
+            </div>
+        </div>
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_kantharos.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Bucchero kantharos</h3>
+            </div>
+        </div>
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_kotyle.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Bucchero kotyle</h3>
+            </div>
+        </div>
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_ladle.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Bucchero ladle (attingitoio)</h3>
+            </div>
+        </div>
+
+        <div class="artifact-card">
+            <model-viewer src="bucchero_oinochoe_con_bocca_trilobata.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
+                <button slot="ar-button" class="ar-button">🔳 VEDI IN AR</button>
+            </model-viewer>
+            <div class="info">
+                <h3>Oinochoe con bocca trilobata</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem;">
+        Progetto realizzato da ITIS Majorana Cassino per Bucchero Next 2026
+    </footer>
+
+</body>
+</html>
