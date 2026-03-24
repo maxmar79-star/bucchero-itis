@@ -9,26 +9,46 @@
 <body>
     <nav>
         <div class="logo">BUCCHERO NEXT</div>
-        <div class="menu">
-            <a href="index.html">HOME</a>
-            <a href="storia.html" class="active">STORIA</a>
-            <a href="gallery.html">GALLERIA AR</a>
-            <a href="progetto.html">IL PROGETTO</a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="storia.html" class="active">STORIA</a></li>
+            <li><a href="gallery.html">GALLERIA AR</a></li>
+            <li><a href="progetto.html">PROGETTO</a></li>
+        </ul>
     </nav>
 
     <main class="container">
-        <h1 class="page-title">Un'eccellenza <span class="highlight">Etrusca</span></h1>
+        <h1 class="page-title" style="margin-top:20px;">L'ECCELLENZA <span style="color:var(--orange)">ETRUSCA</span></h1>
         
         <div class="content-block">
-            <h2>L'Alchimia del Nero</h2>
-            <p>Nato a Cerveteri intorno al 675 a.C., il bucchero non è semplicemente dipinto. Il suo colore nero profondo deriva dalla cottura in <strong>riduzione</strong>: l'ossigeno viene rimosso dal forno, trasformando l'ossido ferrico dell'argilla in ossido ferroso nero.</p>
+            <h2>Cos'è il Bucchero?</h2>
+            <p>Il bucchero è il tipo di ceramica più rappresentativo della civiltà etrusca. La sua caratteristica principale è il colore <strong>nero lucido</strong>, che non è ottenuto tramite verniciatura, ma attraverso un particolare processo chimico durante la cottura.</p>
             
-            
+            <h2 style="margin-top:20px;">La Tecnica della Riduzione</h2>
+            <p>Gli artigiani etruschi chiudevano ermeticamente il forno per impedire l'ingresso dell'ossigeno. In questa atmosfera "riducente", l'ossido di ferro presente nell'argilla si trasformava, conferendo al vaso quel colore nero ebano che ricordava i prestigiosi contenitori in metallo (argento o bronzo) usati dai nobili.</p>
 
-            <h2>Evoluzione e Stili</h2>
-            <p>Dal "Sottile" (pareti finissime) al "Pesante" (più decorato e robusto), il bucchero era l'oggetto più esportato dagli Etruschi nel Mediterraneo, arrivando fino in Egitto e Spagna.</p>
+            <h2 style="margin-top:20px;">Evoluzione dello Stile</h2>
+            <p>Si distinguono solitamente due fasi:</p>
+            <ul style="margin-left: 20px; color: var(--text-dim);">
+                <li><strong>Bucchero Sottile:</strong> Pareti finissime, quasi come carta, tipico del VII secolo a.C.</li>
+                <li><strong>Bucchero Pesante:</strong> Pareti più spesse e decorazioni a rilievo molto ricche, diffuso dal VI secolo a.C.</li>
+            </ul>
         </div>
     </main>
+
+    <footer style="text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem;">
+        Progetto Bucchero Next - ITIS Majorana Cassino
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
