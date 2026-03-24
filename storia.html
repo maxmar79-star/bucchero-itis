@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storia del Bucchero - Bucchero Next</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Storia - Bucchero Next</title>
+    <link rel="stylesheet" href="style.css?v=1.7">
 </head>
 <body>
     <nav>
         <div class="logo">BUCCHERO NEXT</div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="storia.html" class="active">STORIA</a></li>
@@ -19,35 +17,18 @@
             <li><a href="progetto.html">PROGETTO</a></li>
         </ul>
     </nav>
-
     <main class="container">
-        <h1 class="page-title" style="margin-top:20px;">L'ECCELLENZA <span style="color:var(--orange)">ETRUSCA</span></h1>
-        
+        <h1 class="page-title">L'ARTE DEL <span class="highlight">BUCCHERO</span></h1>
         <div class="content-block">
-            <h2>Cos'è il Bucchero?</h2>
-            <p>Il bucchero è il tipo di ceramica più rappresentativo della civiltà etrusca. La sua caratteristica principale è il colore <strong>nero lucido</strong>, che non è ottenuto tramite verniciatura, ma attraverso un particolare processo chimico durante la cottura.</p>
-            
-            <h2 style="margin-top:20px;">La Tecnica della Riduzione</h2>
-            <p>Gli artigiani etruschi chiudevano ermeticamente il forno per impedire l'ingresso dell'ossigeno. In questa atmosfera "riducente", l'ossido di ferro presente nell'argilla si trasformava, conferendo al vaso quel colore nero ebano che ricordava i prestigiosi contenitori in metallo (argento o bronzo) usati dai nobili.</p>
-
-            <h2 style="margin-top:20px;">Evoluzione dello Stile</h2>
-            <p>Si distinguono solitamente due fasi:</p>
-            <ul style="margin-left: 20px; color: var(--text-dim);">
-                <li><strong>Bucchero Sottile:</strong> Pareti finissime, quasi come carta, tipico del VII secolo a.C.</li>
-                <li><strong>Bucchero Pesante:</strong> Pareti più spesse e decorazioni a rilievo molto ricche, diffuso dal VI secolo a.C.</li>
-            </ul>
+            <p>Il bucchero rappresenta l'apice della maestria ceramica etrusca. Il suo colore nero intenso, ottenuto tramite un processo di cottura in riduzione di ossigeno, serviva a imitare la lucentezza dei vasi in metallo prezioso.</p>
+            <br>
+            <p>Oggi, grazie alla tecnologia digitale, possiamo apprezzare questi reperti in un modo completamente nuovo, preservando la memoria di una civiltà che ha segnato il cuore dell'Italia antica.</p>
         </div>
     </main>
-
-    <footer style="text-align: center; padding: 40px; opacity: 0.6; font-size: 0.8rem;">
-        Progetto Bucchero Next - ITIS Majorana Cassino
-    </footer>
-
+    <footer>Progetto Bucchero Next - ITIS Majorana Cassino</footer>
     <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
         });
     </script>
 </body>
