@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Progetto - ITIS Majorana</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Progetto - ITIS Majorana</title>
+    <link rel="stylesheet" href="style.css?v=1.7">
 </head>
 <body>
     <nav>
         <div class="logo">BUCCHERO NEXT</div>
-        <div class="menu">
-            <a href="index.html">HOME</a>
-            <a href="storia.html">STORIA</a>
-            <a href="gallery.html">GALLERIA AR</a>
-            <a href="progetto.html" class="active">IL PROGETTO</a>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="storia.html">STORIA</a></li>
+            <li><a href="gallery.html">GALLERIA AR</a></li>
+            <li><a href="progetto.html" class="active">PROGETTO</a></li>
+        </ul>
     </nav>
-
     <main class="container">
-        <h1 class="page-title">ITIS Majorana <span class="highlight">Cassino</span></h1>
-        
+        <h1 class="page-title">IL PROGETTO <span class="highlight">MAJORANA</span></h1>
         <div class="content-block">
-            <h2>Dalla Scansione alla AR</h2>
-            <p>Per il bando "Bucchero Next", abbiamo trasformato reperti archeologici in modelli digitali interattivi. Utilizzando la tecnologia <strong>WebXR</strong> e la libreria <strong>Google Model-Viewer</strong>, permettiamo a chiunque di posizionare un pezzo di storia etrusca nel proprio ambiente domestico.</p>
-            
-            <div class="project-info">
-                <p><strong>Obiettivo:</strong> Internazionalizzazione e didattica 4.0.</p>
-                <p><strong>Tecnologie:</strong> HTML5, CSS3, JavaScript, GLB modeling.</p>
-            </div>
+            <p>Questo portale è stato realizzato dagli studenti dell'<strong>ITIS Majorana di Cassino</strong> per il bando regionale <em>Bucchero Next</em>.</p>
+            <br>
+            <p>Il nostro obiettivo è stato coniugare l'archeologia etrusca con le frontiere del web moderno, utilizzando modelli 3D e Realtà Aumentata per rendere la cultura accessibile ovunque e a chiunque.</p>
         </div>
     </main>
+    <footer>Progetto Bucchero Next - ITIS Majorana Cassino</footer>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
