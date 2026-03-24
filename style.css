@@ -28,10 +28,10 @@ nav {
     border-bottom: 2px solid var(--orange);
 }
 
-.logo { font-weight: bold; color: var(--orange); font-size: 1.2rem; }
+.logo { font-weight: bold; color: var(--orange); font-size: 1.1rem; }
 .nav-links { display: flex; list-style: none; }
 .nav-links li { margin-left: 20px; }
-.nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+.nav-links a { color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
 .nav-links a.active { color: var(--orange); }
 
 .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
@@ -43,81 +43,110 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), 
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), 
                 url('necropoli-della-banditaccia-via-degli-inferi-cerveteri.jpg'); 
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
-.hero-content {
+.hero-small {
     background: rgba(0,0,0,0.7);
-    padding: 45px;
-    border-radius: 25px;
-    max-width: 800px;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 550px;
     margin: 0 20px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
 .hero-content h1 {
-    font-size: clamp(2rem, 8vw, 3.5rem);
-    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    margin-bottom: 8px;
     letter-spacing: 2px;
 }
 
 .highlight { color: var(--orange); }
 
-/* Testo Arancione Trasparente 50% */
 .subtitle-ar {
     color: var(--orange-50);
-    font-size: clamp(0.9rem, 4vw, 1.3rem);
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-/* IL TASTO ORIGINALE */
+/* TASTO ORIGINALE */
 .btn-main {
     display: inline-block;
     background-color: var(--orange);
     color: white;
-    padding: 15px 40px;
+    padding: 12px 35px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
-    margin-top: 35px;
-    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    margin-top: 25px;
+    transition: 0.3s;
     box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
 }
 
 .btn-main:hover {
     background-color: var(--orange-hover);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(230, 126, 34, 0.6);
+    transform: translateY(-2px);
 }
 
-/* GALLERIA (Card ridotte per scroll) */
+/* GRIGLIE E CONTENUTI */
+.container { padding: 60px 10%; max-width: 1000px; margin: 0 auto; text-align: center; }
+
+/* Blocchi di testo standard (Storia, Progetto) */
+.content-block { 
+    background: var(--card-bg); 
+    padding: 30px; 
+    border-radius: 15px; 
+    border-left: 4px solid var(--orange); /* Il bordino originale */
+    text-align: left; 
+}
+
+.page-title { margin-bottom: 30px; font-size: 2rem; }
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    padding: 50px 12%;
+    padding: 50px 15%; /* Spazio extra per mobile */
 }
 
-.artifact-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    border: 1px solid #333;
-    overflow: hidden;
-    text-align: center;
+/* --- NUOVA CARD GALLERIA CON BORDINO --- */
+.artifact-card-majorana { 
+    background: var(--card-bg); 
+    border-radius: 20px; 
+    border: 1px solid #333; 
+    border-left: 6px solid var(--orange); /* Bordino spesso richiesto */
+    overflow: hidden; 
+    text-align: center; 
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.artifact-card:hover { border-color: var(--orange); }
+.artifact-card-majorana:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.2);
+}
 
-model-viewer { width: 100%; height: 300px; background: #1a1a1a; }
+model-viewer { width: 100%; height: 300px; }
+.info { padding: 15px; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #000;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-top: 1px solid #222;
+}
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -127,7 +156,9 @@ model-viewer { width: 100%; height: 300px; background: #1a1a1a; }
         flex-direction: column;
         position: absolute;
         top: 60px; right: 0; background: #000; width: 100%; padding: 20px;
+        border-bottom: 1px solid var(--orange);
     }
     .nav-links.active { display: flex; }
-    .hero-content { padding: 30px 20px; }
+    .nav-links li { margin: 10px 0; }
+    .hero-small { padding: 25px 15px; }
 }
