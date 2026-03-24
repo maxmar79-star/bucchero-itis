@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bucchero Next - ITIS Majorana</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.5">
 </head>
 <body>
     <nav>
         <div class="logo">BUCCHERO NEXT</div>
-        <div class="menu">
-            <a href="index.html" class="active">HOME</a>
-            <a href="storia.html">STORIA</a>
-            <a href="gallery.html">GALLERIA AR</a>
-            <a href="progetto.html">IL PROGETTO</a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
         </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="storia.html">STORIA</a></li>
+            <li><a href="gallery.html">GALLERIA AR</a></li>
+            <li><a href="progetto.html">PROGETTO</a></li>
+        </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>L'Antico diventa <span class="highlight">Futuro</span></h1>
-            <p>Esplora l'arte etrusca attraverso la Realtà Aumentata. Un ponte tra la storia millenaria e l'innovazione tecnologica dell'ITIS Majorana.</p>
-            <a href="gallery.html" class="btn-main">SCOPRI LA COLLEZIONE</a>
+    <header class="hero">
+        <div class="hero-content hero-small">
+            <h1>VIA DEGLI <span class="highlight">INFERI</span></h1>
+            <p class="subtitle-ar">Il viaggio nel tempo inizia da qui e finisce con la tecnologia dell'ITIS Majorana.</p>
+            <a href="gallery.html" class="btn-main">ESPLORA LA GALLERIA</a>
         </div>
-    </section>
+    </header>
 
-    <section class="features">
-        <div class="feature-card">
-            <h3>Cos'è il Bucchero?</h3>
-            <p>Il "sigillo" della civiltà etrusca. Una ceramica nera unica, ottenuta con una cottura speciale che trasforma l'argilla in un materiale lucido simile al metallo.</p>
-        </div>
-    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
