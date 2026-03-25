@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleria AR - Bucchero Next</title>
-    <link rel="stylesheet" href="style.css?v=1.9">
+    <title>Galleria AR - mAjORnext</title>
+    <link rel="stylesheet" href="style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
 <body>
     <nav>
-        <div class="logo">BUCCHERO NEXT</div>
+        <div class="logo">m<span class="highlight">A</span>jo<span class="highlight">R</span>next</div>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">HOME</a></li>
@@ -20,57 +20,58 @@
     </nav>
 
     <main class="container">
-        <h1 class="page-title">I REPERTI IN <span class="highlight">REALTÀ AUMENTATA</span></h1>
-        <div class="content-block" style="margin-bottom: 40px;">
-            <p>Esplora la nostra selezione di ceramiche in buccero. Ogni modello è stato digitalizzato per permetterti di osservare da vicino la maestria degli artigiani etruschi. 
-            <strong>Usa il tasto AR</strong> dal tuo smartphone per posizionare l'oggetto nel tuo ambiente.</p>
+        <h1 class="page-title">I REPERTI IN <span class="highlight-text">REALTÀ AUMENTATA</span></h1>
+        
+        <div class="content-block">
+            <p>Esplora i capolavori del bucchero digitalizzati dall'ITIS Majorana. <strong>Usa il tasto AR</strong> dal tuo smartphone per visualizzare i modelli 3D nel tuo ambiente reale.</p>
         </div>
 
-        <div class="gallery-container" style="padding: 0;"> <div class="artifact-card-majorana">
+        <div class="gallery-container">
+            <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_calice_dal_tumulo_di_Molinello.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Calice Molinello</h3></div>
             </div>
 
             <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_caryatid.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Bucchero Cariatide</h3></div>
             </div>
 
             <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_kantharos.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Kantharos</h3></div>
             </div>
 
             <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_kotyle.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Kotyle</h3></div>
             </div>
 
             <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_ladle.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Attingitoio</h3></div>
             </div>
 
             <div class="artifact-card-majorana">
                 <model-viewer src="bucchero_oinochoe_con_bocca_trilobata.glb" ar ar-modes="scene-viewer webxr quick-look" camera-controls shadow-intensity="1" auto-rotate>
-                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%); padding: 8px 20px; font-size: 0.8rem;">VEDI IN AR</button>
+                    <button slot="ar-button" class="btn-main" style="position:absolute; bottom:10px; left:50%; transform:translateX(-50%);">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Oinochoe Trilobata</h3></div>
             </div>
         </div>
     </main>
 
-    <footer>Progetto Bucchero Next - ITIS Majorana Cassino</footer>
+    <footer>© 2026 mAjORnext - Majorana Etruscan ARchaeology</footer>
 
     <script>
         document.getElementById('hamburger').addEventListener('click', () => {
