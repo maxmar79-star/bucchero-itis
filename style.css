@@ -12,7 +12,6 @@ body {
     background-color: var(--dark-bg);
     color: white;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* NAVBAR */
@@ -33,12 +32,10 @@ nav {
     color: #ffffff; 
     font-size: 1.4rem; 
     letter-spacing: 1px;
-    text-transform: none !important;
+    text-transform: none !important; /* Impedisce il tutto maiuscolo */
 }
 
-.logo .highlight { 
-    color: var(--orange) !important; 
-}
+.logo .highlight { color: var(--orange) !important; }
 
 .nav-links { display: flex; list-style: none; }
 .nav-links li { margin-left: 20px; }
@@ -47,7 +44,7 @@ nav {
     text-decoration: none; 
     font-weight: 600; 
     font-size: 0.85rem; 
-    transition: 0.3s;
+    text-transform: uppercase; /* Solo i link restano maiuscoli per ordine */
 }
 .nav-links a.active, .nav-links a:hover { color: var(--orange); }
 
@@ -64,50 +61,42 @@ nav {
                 url('necropoli-della-banditaccia-via-degli-inferi-cerveteri.jpg'); 
     background-size: cover;
     background-position: center;
-    text-align: center;
 }
 
 .hero-small {
     background: rgba(0,0,0,0.5);
     padding: 35px 35px 35px 45px;
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 20px;
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255,255,255,0.1);
     border-left: 6px solid var(--orange);
     border-radius: 20px;
+    text-align: center;
 }
 
-.hero-content h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 10px; }
+.hero-content h1 { 
+    font-size: clamp(2rem, 6vw, 3rem); 
+    margin-bottom: 10px;
+    text-transform: none; /* Rispetta mAjoRnext */
+}
+
 .highlight-text { color: var(--orange); }
 
 .slogan-mixed {
     color: white;
     font-size: clamp(1rem, 3.5vw, 1.2rem);
     font-weight: 500;
-    margin-top: 15px;
 }
-
-.highlight-majorana { color: var(--orange); font-weight: 800; }
-
-.btn-main {
-    display: inline-block;
-    background-color: var(--orange);
-    color: white;
-    padding: 12px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 25px;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.3);
-}
-
-.btn-main:hover { background: var(--orange-hover); transform: translateY(-2px); }
 
 /* LAYOUT PAGINE */
 .container { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
-.page-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; text-transform: uppercase; }
+.page-title { 
+    text-align: center; 
+    margin-bottom: 50px; 
+    font-size: 2.5rem; 
+    text-transform: none; /* Fondamentale per mAjoRnext */
+}
 
 .content-block { 
     background: var(--card-bg); 
@@ -115,7 +104,6 @@ nav {
     border-radius: 15px; 
     border-left: 6px solid var(--orange); 
     margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* GALLERIA */
@@ -131,15 +119,9 @@ nav {
     border-left: 6px solid var(--orange); 
     overflow: hidden; 
     text-align: center;
-    transition: 0.3s;
 }
 
-.artifact-card-majorana:hover { transform: translateY(-10px); }
-
 model-viewer { width: 100%; height: 350px; background: #151515; }
-
-.info { padding: 20px; border-top: 1px solid #333; }
-.info h3 { color: var(--orange); font-size: 1.2rem; }
 
 /* FOOTER */
 footer {
@@ -149,10 +131,8 @@ footer {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.85rem;
     border-top: 1px solid #222;
-    letter-spacing: 1px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links {
@@ -160,8 +140,6 @@ footer {
         flex-direction: column;
         position: absolute;
         top: 65px; right: 0; background: #000; width: 100%; padding: 20px;
-        border-bottom: 2px solid var(--orange);
     }
     .nav-links.active { display: flex; }
-    .nav-links li { margin: 15px 0; }
 }
