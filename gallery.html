@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galleria - mAjoRnext</title>
+    <title>Galleria AR - mAjoRnext</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </head>
@@ -22,44 +22,50 @@
     <main class="container">
         <h1 class="page-title">m<span class="highlight-text">A</span>jo<span class="highlight-text">R</span>next: AR GALLERY</h1>
         
+        <div class="content-block">
+            <p style="text-align: center; font-size: 1.1rem;">
+                Benvenuti nella nostra esposizione digitale in 3D. Con il mouse o con un tocco è possiible ruotare i vasi a 360°. Da smartphone è possibile cliccare sul tasto <strong>"VEDI IN AR"</strong> per proiettare il reperto etrusco direttamente nel proprio ambiente reale.
+            </p>
+        </div>
+
         <div class="gallery-container">
             <div class="artifact-card">
-                <model-viewer src="bucchero_calice_dal_tumulo_di_Molinello.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_calice_dal_tumulo_di_Molinello.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Calice Molinello</h3></div>
             </div>
 
             <div class="artifact-card">
-                <model-viewer src="bucchero_caryatid.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_caryatid.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Bucchero Cariatide</h3></div>
             </div>
 
             <div class="artifact-card">
-                <model-viewer src="bucchero_kantharos.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_kantharos.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Kantharos</h3></div>
             </div>
 
             <div class="artifact-card">
-                <model-viewer src="bucchero_kotyle.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_kotyle.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Kotyle</h3></div>
             </div>
 
             <div class="artifact-card">
-                <model-viewer src="bucchero_ladle.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_ladle.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Attingitoio</h3></div>
             </div>
 
             <div class="artifact-card">
-                <model-viewer src="bucchero_oinochoe_con_bocca_trilobata.glb" ar ar-modes="scene-viewer webxr" camera-controls auto-rotate>
+                <model-viewer src="bucchero_oinochoe_con_bocca_trilobata.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls shadow-intensity="1" auto-rotate touch-action="pan-y">
                     <button slot="ar-button" class="btn-ar">VEDI IN AR</button>
                 </model-viewer>
                 <div class="info"><h3>Oinochoe Trilobata</h3></div>
@@ -68,14 +74,22 @@
     </main>
 
     <footer>© 2026 mAjoRnext - Majorana Etruscan ARchaeology</footer>
+
     <script>
         const hb = document.getElementById('hamburger');
         const nl = document.getElementById('nav-links');
         hb.onclick = () => {
+            const isOpen = nl.classList.toggle('active');
             hb.classList.toggle('active');
-            nl.classList.toggle('active');
-            document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto';
+            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
         };
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.onclick = () => {
+                hb.classList.remove('active');
+                nl.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            };
+        });
     </script>
 </body>
 </html>
