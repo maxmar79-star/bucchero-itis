@@ -27,13 +27,7 @@ nav {
     border-bottom: 2px solid var(--orange);
 }
 
-.logo { 
-    font-weight: 800; 
-    color: #ffffff; 
-    font-size: 1.4rem; 
-    letter-spacing: 1px;
-}
-
+.logo { font-weight: 800; color: #ffffff; font-size: 1.4rem; letter-spacing: 1px; }
 .logo .highlight { color: var(--orange); }
 
 .nav-links { display: flex; list-style: none; }
@@ -47,41 +41,36 @@ nav {
 }
 .nav-links a.active, .nav-links a:hover { color: var(--orange); }
 
+/* HAMBURGER */
 .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 2100; }
 .hamburger span { width: 25px; height: 3px; background: var(--orange); transition: 0.3s; }
 
-/* HERO - HOME CON SFONDO */
+/* HERO INDEX */
 .hero {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
-                url('necropoli-della-banditaccia-via-degli-inferi-cerveteri.jpg'); 
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('necropoli-della-banditaccia-via-degli-inferi-cerveteri.jpg'); 
     background-size: cover;
     background-position: center;
 }
 
-/* RIQUADRO GLASSMORPHISM NELLA HOME */
 .hero-small {
     background: rgba(0,0,0,0.6);
     padding: 45px;
     max-width: 750px;
-    margin: 0 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
     border-left: 8px solid var(--orange);
     border-radius: 20px;
     text-align: center;
 }
 
-.hero-small h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 15px; }
-
-/* PULSANTI */
-.btn-main {
+/* PULSANTI ARANCIONI */
+.btn-orange {
     display: inline-block;
     background-color: var(--orange);
-    color: white;
+    color: white !important;
     padding: 14px 40px;
     border-radius: 50px;
     text-decoration: none;
@@ -89,10 +78,11 @@ nav {
     margin-top: 25px;
     transition: 0.3s;
     border: none;
+    cursor: pointer;
 }
-.btn-main:hover { background: var(--orange-hover); transform: translateY(-3px); }
+.btn-orange:hover { background: var(--orange-hover); transform: translateY(-3px); }
 
-/* LAYOUT PAGINE E RIQUADRI CONTENUTO */
+/* CONTENUTI E RIQUADRI */
 .container { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
 .page-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
 
@@ -109,17 +99,19 @@ nav {
 
 /* GALLERIA */
 .gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
-.artifact-card-majorana { background: var(--card-bg); border-radius: 25px; border-left: 6px solid var(--orange); overflow: hidden; text-align: center; }
+.artifact-card { background: var(--card-bg); border-radius: 25px; border-left: 6px solid var(--orange); overflow: hidden; text-align: center; }
 model-viewer { width: 100%; height: 400px; background: #111; position: relative; }
-.btn-ar { 
+
+/* Pulsante AR centrato nel modello */
+model-viewer .btn-ar {
     position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-    background: var(--orange); color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; 
+    background: var(--orange); color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; cursor: pointer;
 }
 
 /* FOOTER */
-footer { text-align: center; padding: 50px; background: #000; color: #555; font-size: 0.9rem; border-top: 1px solid #222; }
+footer { text-align: center; padding: 50px; background: #000; color: #555; font-size: 0.8rem; border-top: 1px solid #222; }
 
-/* MOBILE MENU */
+/* MOBILE MENU COMPLETO */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links {
