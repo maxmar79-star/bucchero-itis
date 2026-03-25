@@ -9,9 +9,7 @@
 <body>
     <nav>
         <div class="logo">m<span class="highlight">A</span>jo<span class="highlight">R</span>next</div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="storia.html" class="active">STORIA</a></li>
@@ -31,7 +29,7 @@
             <br>
             <p><strong>2. La fase del "bestiario" e la decontestualizzazione:</strong> Durante il VII secolo a.C., gli artigiani etruschi adottano figure mitologiche come sfingi, grifoni e chimere. Inizialmente, questi elementi vengono usati come simboli di prestigio e potere, spesso svuotati del loro significato narrativo originale per diventare decorazioni "esotiche" di lusso.</p>
             <br>
-            <p><strong>3. La maturità e la funzione politica (VI sec. a.C.):</strong> Con il tempo, il mito diventa narrazione consapevole. Le gesta di Eracle o i racconti dell'Iliade diventano modelli di comportamento in cui i <strong>princeps</strong> (i capi delle famiglie aristocratiche) si identificano. Il mito serve a giustificare la loro superiorità sociale e il loro diritto al comando.</p>
+            <p><strong>3. La maturità e la funzione politica (VI sec. a.C.):</strong> Con il tempo, il mito diventa narrazione consapevole. Le gesta di Eracle o i racconti dell'Iliade diventano modelli di comportamento in cui i <strong>princeps</strong> (i capi delle famiglie aristocratiche) si identificano per giustificare la propria superiorità sociale e il proprio diritto al comando.</p>
         </div>
 
         <div class="content-block" style="padding: 0; overflow: hidden; border-left: 8px solid var(--orange);">
@@ -40,18 +38,18 @@
 
         <div class="content-block">
             <h2 class="highlight-text" style="margin-bottom: 20px;">Il Bucchero: L'Invenzione Etrusca</h2>
-            <p>Il bucchero è considerato la ceramica nazionale etrusca. La sua caratteristica principale è il colore nero uniforme, non ottenuto con vernici, ma attraverso un processo chimico-fisico durante la cottura.</p>
+            <p>Il bucchero è considerato la ceramica nazionale etrusca. La sua caratteristica principale è il colore nero uniforme, ottenuto attraverso un complesso processo chimico-fisico durante la cottura.</p>
             <br>
-            <p><strong>La cottura in riduzione:</strong> I vasi venivano chiusi in un forno sigillato per impedire l'ingresso di ossigeno. All'interno si creava un'atmosfera ricca di monossido di carbonio che trasformava l'ossido di ferro rosso presente nell'argilla in <strong>ossido ferroso nero (magnetite)</strong>. Questo processo rendeva l'intero corpo del vaso nero, non solo la superficie.</p>
+            <p><strong>La cottura in riduzione:</strong> I vasi venivano chiusi in un forno sigillato per impedire l'ingresso di ossigeno. All'interno si creava un'atmosfera ricca di monossido di carbonio che trasformava chimicamente l'ossido di ferro rosso presente nell'argilla in <strong>ossido ferroso nero (magnetite)</strong>. Questo processo rendeva l'intero corpo del vaso nero, non solo la superficie.</p>
             <br>
-            <p>L'obiettivo estetico era l'imitazione dei vasi in metallo (argento o bronzo brunito), permettendo alla classe media emergente di esibire oggetti che richiamassero il lusso delle stoviglie metalliche delle classi più ricche.</p>
+            <p>L'obiettivo estetico era l'imitazione dei vasi in metallo (argento o bronzo), permettendo a una classe media emergente di esibire oggetti che richiamassero il lusso delle stoviglie metalliche tipiche delle classi più abbienti.</p>
         </div>
 
         <div class="content-block">
             <h2 class="highlight-text" style="margin-bottom: 20px;">La Tecnica della "Lucidatura a Stecca"</h2>
-            <p>Per ottenere la tipica lucentezza metallica, gli artigiani utilizzavano la tecnica della lucidatura a stecca eseguita allo <strong>"stato cuoio"</strong>. Quando il vaso era parzialmente asciutto ma ancora malleabile, la superficie veniva sfregata vigorosamente con uno strumento liscio e duro (in osso o legno levigato).</p>
+            <p>Per ottenere la tipica lucentezza metallica, gli artigiani utilizzavano la tecnica della lucidatura a stecca eseguita allo <strong>"stato cuoio"</strong>. Quando il vaso era parzialmente asciutto, la superficie veniva sfregata vigorosamente con uno strumento liscio e duro (in osso o legno levigato).</p>
             <br>
-            <p>Questa pressione meccanica comprimeva le lamelle di argilla in modo uniforme, eliminando la porosità e creando una superficie specchiante che, una volta cotta, manteneva una brillantezza straordinaria senza necessità di invetriatura.</p>
+            <p>Questa pressione meccanica comprimeva le lamelle di argilla, eliminando la porosità e creando una superficie specchiante che, una volta cotta, manteneva una brillantezza straordinaria senza necessità di invetriatura o vernice aggiuntiva.</p>
         </div>
     </main>
 
@@ -60,20 +58,11 @@
     <script>
         const hb = document.getElementById('hamburger');
         const nl = document.getElementById('nav-links');
-
-        hb.addEventListener('click', () => {
+        hb.onclick = () => {
             hb.classList.toggle('active');
             nl.classList.toggle('active');
             document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto';
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                hb.classList.remove('active');
-                nl.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
+        };
     </script>
 </body>
 </html>
