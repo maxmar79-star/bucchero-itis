@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mAjORnext - Home</title>
+    <title>mAjoRnext - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,8 +21,8 @@
     <header class="hero">
         <div class="hero-small">
             <h1>m<span class="highlight-text">A</span>jo<span class="highlight-text">R</span>next</h1>
-            <p style="font-size: 1.2rem;">Il viaggio nel tempo inizia con la tecnologia dell'<strong>ITIS Majorana di Cassino</strong>.</p>
-            <a href="gallery.html" class="btn-main">ESPLORA LA GALLERIA</a>
+            <p>Il viaggio nel tempo inizia con la tecnologia dell'<strong>ITIS Majorana di Cassino</strong>.</p>
+            <a href="gallery.html" class="btn-orange">ESPLORA LA GALLERIA</a>
         </div>
     </header>
 
@@ -31,7 +31,11 @@
     <script>
         const hb = document.getElementById('hamburger');
         const nl = document.getElementById('nav-links');
-        hb.onclick = () => { hb.classList.toggle('active'); nl.classList.toggle('active'); document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto'; };
+        hb.onclick = () => {
+            hb.classList.toggle('active');
+            nl.classList.toggle('active');
+            document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto';
+        };
     </script>
 </body>
 </html>
