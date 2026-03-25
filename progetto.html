@@ -22,16 +22,17 @@
         <h1 class="page-title">IL PROGETTO m<span class="highlight-text">A</span>jo<span class="highlight-text">R</span>next</h1>
         
         <div class="content-block">
-            <p>Questo portale è stato realizzato dagli studenti dell'<strong>ITIS Majorana di Cassino</strong> nell'ambito del bando regionale <em>Bucchero Next</em>. Il lavoro nasce dalla volontà di unire il passato glorioso del nostro territorio con le competenze tecnologiche del futuro.</p>
+            <h2 class="highlight-text" style="margin-bottom: 15px;">Genesi e Finalità</h2>
+            <p>Questo portale rappresenta il culmine di un percorso di ricerca e sviluppo condotto dagli studenti dell'<strong>ITIS Majorana di Cassino</strong>, nell'ambito del bando regionale <em>Bucchero Next</em>. Il progetto nasce dall'esigenza di valorizzare il patrimonio archeologico etrusco attraverso l'applicazione delle più moderne tecnologie digitali.</p>
             <br>
-            <p>Il nostro obiettivo principale è stato quello di coniugare il fascino millenario dell'archeologia etrusca con le più moderne tecnologie del web digitale. Grazie all'uso di modelli 3D ad alta fedeltà e alla Realtà Aumentata (AR), abbiamo reso la cultura accessibile in un modo innovativo e interattivo.</p>
-            <br>
-            <p>Attraverso <strong>m<span class="highlight-text">A</span>jo<span class="highlight-text">R</span>next</strong>, il patrimonio storico non è più solo da osservare dietro una vetrina, ma diventa un'esperienza tangibile che chiunque può portare nel proprio ambiente quotidiano grazie a uno smartphone, abbattendo le barriere fisiche dei musei tradizionali.</p>
+            <p>Il nostro obiettivo principale è coniugare il fascino millenario dell'archeologia con le competenze tecniche del futuro. Grazie all'uso di modelli 3D ad alta fedeltà e alla Realtà Aumentata (AR), abbiamo reso la cultura accessibile in un modo innovativo e interattivo, abbattendo le barriere fisiche tra il reperto e l'osservatore.</p>
         </div>
 
         <div class="content-block">
-            <h2 style="color: var(--orange); margin-bottom: 15px;">Tecnologia e Formazione</h2>
-            <p>Il lavoro ha coinvolto diverse fasi critiche: dalla ricerca storica approfondita alla modellazione 3D fotorealistica, fino allo sviluppo di un'interfaccia web ottimizzata per i dispositivi mobili. È la dimostrazione pratica di come le competenze tecniche acquisite nelle aule dell'<strong>ITIS Majorana</strong> possano mettersi concretamente al servizio della valorizzazione dei beni culturali e del territorio.</p>
+            <h2 class="highlight-text" style="margin-bottom: 15px;">Tecnologia al Servizio della Cultura</h2>
+            <p>Attraverso <strong>m<span class="highlight-text">A</span>jo<span class="highlight-text">R</span>next</strong>, il patrimonio storico non è più un elemento statico da osservare dietro una vetrina, ma diventa un'esperienza tangibile. Il lavoro ha coinvolto diverse fasi critiche: dalla ricerca storiografica alla modellazione 3D fotorealistica, fino alla programmazione di un'interfaccia web ottimizzata per ogni dispositivo.</p>
+            <br>
+            <p>È la dimostrazione di come le competenze acquisite nelle aule dell'<strong>ITIS Majorana</strong> possano essere messe concretamente al servizio del territorio, trasformando lo studio teorico in uno strumento di divulgazione culturale d'avanguardia.</p>
         </div>
     </main>
 
@@ -40,7 +41,11 @@
     <script>
         const hb = document.getElementById('hamburger');
         const nl = document.getElementById('nav-links');
-        hb.onclick = () => { hb.classList.toggle('active'); nl.classList.toggle('active'); document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto'; };
+        hb.onclick = () => {
+            hb.classList.toggle('active');
+            nl.classList.toggle('active');
+            document.body.style.overflow = nl.classList.contains('active') ? 'hidden' : 'auto';
+        };
     </script>
 </body>
 </html>
