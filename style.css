@@ -32,10 +32,9 @@ nav {
     color: #ffffff; 
     font-size: 1.4rem; 
     letter-spacing: 1px;
-    text-transform: none !important; /* Impedisce il tutto maiuscolo */
 }
 
-.logo .highlight { color: var(--orange) !important; }
+.logo .highlight { color: var(--orange); }
 
 .nav-links { display: flex; list-style: none; }
 .nav-links li { margin-left: 20px; }
@@ -44,102 +43,94 @@ nav {
     text-decoration: none; 
     font-weight: 600; 
     font-size: 0.85rem; 
-    text-transform: uppercase; /* Solo i link restano maiuscoli per ordine */
+    text-transform: uppercase;
 }
 .nav-links a.active, .nav-links a:hover { color: var(--orange); }
 
-.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-.hamburger span { width: 25px; height: 3px; background: var(--orange); }
+.hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; z-index: 2100; }
+.hamburger span { width: 25px; height: 3px; background: var(--orange); transition: 0.3s; }
 
-/* HERO - HOME */
+/* HERO - HOME CON SFONDO */
 .hero {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), 
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
                 url('necropoli-della-banditaccia-via-degli-inferi-cerveteri.jpg'); 
     background-size: cover;
     background-position: center;
 }
 
+/* RIQUADRO GLASSMORPHISM NELLA HOME */
 .hero-small {
-    background: rgba(0,0,0,0.5);
-    padding: 35px 35px 35px 45px;
-    max-width: 650px;
+    background: rgba(0,0,0,0.6);
+    padding: 45px;
+    max-width: 750px;
     margin: 0 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.1);
-    border-left: 6px solid var(--orange);
+    border-left: 8px solid var(--orange);
     border-radius: 20px;
     text-align: center;
 }
 
-.hero-content h1 { 
-    font-size: clamp(2rem, 6vw, 3rem); 
-    margin-bottom: 10px;
-    text-transform: none; /* Rispetta mAjoRnext */
+.hero-small h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 15px; }
+
+/* PULSANTI */
+.btn-main {
+    display: inline-block;
+    background-color: var(--orange);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: 0.3s;
+    border: none;
+}
+.btn-main:hover { background: var(--orange-hover); transform: translateY(-3px); }
+
+/* LAYOUT PAGINE E RIQUADRI CONTENUTO */
+.container { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
+.page-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; }
+
+.content-block { 
+    background: var(--card-bg); 
+    padding: 40px; 
+    border-radius: 20px; 
+    border-left: 8px solid var(--orange); 
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .highlight-text { color: var(--orange); }
 
-.slogan-mixed {
-    color: white;
-    font-size: clamp(1rem, 3.5vw, 1.2rem);
-    font-weight: 500;
-}
-
-/* LAYOUT PAGINE */
-.container { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
-.page-title { 
-    text-align: center; 
-    margin-bottom: 50px; 
-    font-size: 2.5rem; 
-    text-transform: none; /* Fondamentale per mAjoRnext */
-}
-
-.content-block { 
-    background: var(--card-bg); 
-    padding: 35px; 
-    border-radius: 15px; 
-    border-left: 6px solid var(--orange); 
-    margin-bottom: 40px;
-}
-
 /* GALLERIA */
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
+.artifact-card-majorana { background: var(--card-bg); border-radius: 25px; border-left: 6px solid var(--orange); overflow: hidden; text-align: center; }
+model-viewer { width: 100%; height: 400px; background: #111; position: relative; }
+.btn-ar { 
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: var(--orange); color: white; border: none; padding: 10px 25px; border-radius: 50px; font-weight: bold; cursor: pointer; 
 }
-
-.artifact-card-majorana { 
-    background: var(--card-bg); 
-    border-radius: 20px; 
-    border-left: 6px solid var(--orange); 
-    overflow: hidden; 
-    text-align: center;
-}
-
-model-viewer { width: 100%; height: 350px; background: #151515; }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.85rem;
-    border-top: 1px solid #222;
-}
+footer { text-align: center; padding: 50px; background: #000; color: #555; font-size: 0.9rem; border-top: 1px solid #222; }
 
+/* MOBILE MENU */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 65px; right: 0; background: #000; width: 100%; padding: 20px;
+        display: none; flex-direction: column; justify-content: center; align-items: center;
+        position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+        background: rgba(0,0,0,0.98); backdrop-filter: blur(15px); z-index: 2000;
     }
     .nav-links.active { display: flex; }
+    .nav-links li { margin: 25px 0; }
+    .nav-links a { font-size: 2.2rem; }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
